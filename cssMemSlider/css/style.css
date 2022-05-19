@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    height: 100%;    
+}
+  
+.block {
+    height: 100%;
+    display: flex;
+    gap: 2rem;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    padding: 20px;
+  }
+  
+.block__images {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+    width: 60rem;
+    height: 25rem;
+    border-radius: 20px;
+}
+  
+.block__img {
+    width: 100%;
+    transition: 0.5s;
+  }
+  
+img {
+    width: 60rem;
+    height: 25.4rem;
+  }
+  
+#switch-one:checked ~ .block__images > .block__img {
+    transform: translate(0);
+  }
+  
+#switch-two:checked ~ .block__images > .block__img {
+    transform: translate(-100%);
+  }
+  
+#switch-three:checked ~ .block__images > .block__img {
+    transform: translate(-200%);
+  }
+  
+#switch-four:checked ~ .block__images > .block__img {
+    transform: translate(-300%);
+  }
+  
+#switch-one:checked ~ .block__btm > .block__content > .block__text {
+    transform: translateY(0);
+  }
+  
+#switch-two:checked ~ .block__btm > .block__content > .block__text {
+    transform: translateY(-100%);
+  }
+  
+#switch-three:checked ~ .block__btm > .block__content > .block__text {
+    transform: translateY(-200%);
+}
+  
+#switch-four:checked ~ .block__btm > .block__content > .block__text {
+    transform: translateY(-300%);
+}
+
+.block__btm {
+    display: flex;
+    justify-content: space-between;
+    width: 50rem;
+}
+
+  #switch-one:checked ~ .block__btm > .nav > label[for='switch-one'] > .circle,
+  #switch-two:checked ~ .block__btm > .nav > label[for='switch-two'] > .circle,
+  #switch-three:checked ~ .block__btm > .nav > label[for='switch-three'] > .circle,
+  #switch-four:checked ~ .block__btm > .nav > label[for='switch-four'] > .circle {
+    border-color: black;
+    transform: scale(1.1);
+}
+  
+.block__content {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 5rem;
+    width: 50%;
+    order: 0;
+    overflow: hidden;
+    font-size: 1.5em;
+}
+  
+.block__text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    align-items: center;
+    height: 5rem;
+    flex-shrink: 0;
+    transition: 0.5s;
+}
+  
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    order: 1;
+    width: 10rem;
+}
+  
+.bar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 1rem;
+    width: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+  
+.circle {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: rgb(217, 235, 235);
+    border: 0.2rem solid #72570e;
+    margin: auto;
+    align-self: center;
+    transition: all 0.5s;
+}
+  
+.bar:hover .circle {
+    background-color: #fff;
+    border-color: black;
+}
+  
+.bar:active .circle {
+    background-color: #fff;
+    border-color: black;
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+  
+input[name='control'] {
+    display: none;
+}
+  
+@media (min-width: 690px) and (max-width: 1000px) {
+  .block__images {
+    
+    width: 40rem;
+    height: 20rem;
+    border-radius: 20px;
+}
+
+img {
+    width: 40rem;
+    height: 20.4rem;
+  }
+
+.block__btm {
+   
+    width: 35rem;
+}
+}
+
+@media (min-width: 440px) and (max-width: 689px) {
+  .block__images {
+    
+    width: 25rem;
+    height: 10rem;
+    border-radius: 20px;
+}
+
+img {
+    width: 25rem;
+    height: 10.4rem;
+  }
+
+.block__btm {
+  flex-direction: column;
+  
+  width: 25rem;
+}
+
+.block__content {
+ order: 2;
+ width: 80%;
+}
+
+.nav {
+  order: 1;
+  margin: 0 auto;
+}
+}
+
+@media (min-width: 320px) and (max-width: 439px) {
+  .block__images {
+    
+    width: 18rem;
+    height: 10rem;
+    border-radius: 20px;
+}
+
+img {
+    width: 18rem;
+    height: 10.4rem;
+  }
+
+.block__btm {
+  flex-direction: column;
+  
+  width: 18rem;
+}
+
+.block__content {
+ order: 2;
+ width: 80%;
+}
+
+.nav {
+  margin: 0 auto;
+  order: 1;
+}
+}

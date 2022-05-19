@@ -197,17 +197,18 @@ img {
 
 .block__btm {
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 22rem;
+  
+  width: 25rem;
 }
 
 .block__content {
  order: 2;
+ width: 80%;
 }
 
 .nav {
   order: 1;
+  margin: 0 auto;
 }
 }
 
@@ -226,17 +227,17 @@ img {
 
 .block__btm {
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 22rem;
+  
+  width: 18rem;
 }
 
 .block__content {
  order: 2;
- text-align: center;
+ width: 80%;
 }
 
 .nav {
+  margin: 0 auto;
   order: 1;
 }
 }

@@ -8,19 +8,43 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
 </head>
-<body class="body">
-    <div class="wrapper">
-        <div><img src="assets/img/cat.jpg" class="img"></div>
-        <div class="container">
-            <div class="text">Eat without me again!?</div>
-            <div class="control">
-                <div class="cont1_1"><div class="cont2_1 act"></div></div>
-                <div class="cont1_2"><div class="cont2_2"></div></div>
-                <div class="cont1_3"><div class="cont2_3"></div></div>
-                <div class="cont1_4"><div class="cont2_4"></div></div>
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
+<body>
+<div class="wrapper">
+<div class="block">
+	<input type="radio" name="control" id="switch-one" checked>
+	<input type="radio" name="control" id="switch-two">
+	<input type="radio" name="control" id="switch-three">
+	<input type="radio" name="control" id="switch-four">
+	<div class="block__images">
+			<div class="block__img"><img src="assets/img/cat.jpg" alt="It is cat"></div>
+			<div class="block__img"><img src="assets/img/antract.jpg" alt="It is theatre"></div>
+			<div class="block__img"><img src="assets/img/ship.jpg" alt="It is ship"></div>
+			<div class="block__img"><img src="assets/img/health.jpg" alt="It is mask"></div>
+	</div>
+
+		<div class="block__btm">
+			<div class="nav">
+				<label for="switch-one" class="bar">
+					<div class="circle"></div>
+				</label>
+				<label for="switch-two" class="bar">
+					<div class="circle"></div>
+				</label>
+				<label for="switch-three" class="bar">
+					<div class="circle"></div>
+				</label>
+				<label for="switch-four" class="bar">
+					<div class="circle"></div>
+				</label>
+			</div>
+
+			<div class="block__content">
+				<span class="block__text">Eat without me again!?</span>
+				<span class="block__text">Intermission!</span>
+				<span class="block__text">Get in line, ship!</span>
+				<span class="block__text">And did you protect yourself?</span>
+			</div>
+			</div>
+		</div>
 </body>
 </html>
